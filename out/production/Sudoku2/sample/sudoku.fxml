@@ -1,0 +1,81 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.MenuBar?>
+
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<StackPane fx:controller="sample.SudokuController" xmlns:fx="http://javafx.com/fxml">
+
+    <VBox>
+        <MenuBar prefWidth="NaN" prefHeight="NaN">
+            <Menu text="Informacje">
+                <items>
+                    <MenuItem text="Zasady gry" onAction="#informationWindow"/>
+                    <MenuItem text="O autorze" onAction="#authorWindow"/>
+                </items>
+            </Menu>
+        </MenuBar>
+
+        <GridPane fx:id="gridPane"
+                  alignment="center" hgap="0" vgap="0">
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+            <Rectangle GridPane.rowIndex="0" GridPane.columnIndex="3" GridPane.rowSpan="11" width="10" height="560"/>
+            <Rectangle GridPane.rowIndex="0" GridPane.columnIndex="7" GridPane.rowSpan="11" width="10" height="560"/>
+            <Rectangle GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="11" width="560" height="10"/>
+            <Rectangle GridPane.rowIndex="7" GridPane.columnIndex="0" GridPane.columnSpan="11" width="560" height="10"/>
+        </GridPane>
+        <HBox
+        fx:id="Hbox"
+        alignment="BOTTOM_CENTER"
+        minHeight="100">
+
+            <Button prefWidth="200" prefHeight="50" text="Sprawdź" onAction="#check"/>
+
+            <Button prefWidth="200" prefHeight="50" text="Nowa gra" onAction="#generate"/>
+        </HBox>
+        <HBox
+            fx:id="HboxLabel"
+            alignment="BOTTOM_CENTER"
+            prefHeight="300"
+            >
+            <Label prefHeight="100" />
+        </HBox>
+    </VBox>
+</StackPane>

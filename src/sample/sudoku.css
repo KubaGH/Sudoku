@@ -1,0 +1,13 @@
+.text-field {
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+.text-field:hover{
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-border-color: grey;
+    -fx-border-width: 3;
+}
+
